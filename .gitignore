@@ -4,6 +4,10 @@ __pycache__
 # C extensions
 *.so
 
+# IDE
+.vscode
+.idea 
+
 # Packages
 *.egg
 *.egg-info

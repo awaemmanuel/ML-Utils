@@ -51,6 +51,21 @@ def error_term_formula(x, y, output):
     """
     return (y - output) * sigmoid_prime(x)
 
+def hyperbolic_tangent(x):
+    """Implementation of the hyperbolic tangent function  
+
+    Derivates will be larger since the values are between 1 and -1
+    """
+    x = np.float_(x)
+    return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
+
+def relu(x):
+    """Implementation of the rectified linear unit function  
+
+    Derivates will be larger since the values are between x and 0
+    """
+    return x if x >= 0 else 0
+
 def pd_one_hot_data(data, columns, prefix=''):
     """Returns a one hot data for the specified pandas columns
     
